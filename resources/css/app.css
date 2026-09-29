@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+.register-container {
+    @apply flex items-center justify-center min-h-screen gap-8 bg-gray-100 p-6;
+}
+.login-visual {
+    @apply relative hidden overflow-hidden rounded-lg shadow-md lg:block;
+    width: min(42vw, 34rem);
+    height: 32rem;
+}
+.login-visual::after {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.05) 20%, rgba(15, 23, 42, 0.82) 100%);
+}
+.login-visual img {
+    @apply h-full w-full object-cover;
+}
+.login-visual-content {
+    @apply absolute bottom-0 left-0 z-10 p-8 text-white;
+}
+.login-visual-content span {
+    @apply text-sm font-semibold uppercase tracking-widest text-blue-200;
+}
+.login-visual-content h1 {
+    @apply mt-3 text-3xl font-bold leading-tight;
+}
+.login-container-form {
+    @apply bg-white p-8 rounded shadow-md w-3/4 max-w-md;
+}
+#login-form {
+    @apply flex flex-col;
+}
+.input-login {
+    @apply border border-gray-300 rounded-md py-2 px-4 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+.param-login {
+    @apply mb-2 font-semibold;
+}
+#login-error {
+    @apply text-red-500 mb-4;
+}
+#register {
+    @apply text-center mt-4 bg-gray-100 p-4 rounded;
+}
+.header-login {
+    @apply text-2xl font-bold mb-6 text-center;
+}
+.header-login span {
+    @apply text-blue-500;
+}
+.register-container {
+    @apply flex items-center justify-center min-h-screen gap-8 bg-gray-100 p-6;
+}
+.register-form {
+    @apply bg-white p-8 rounded shadow-md w-3/4 max-w-md;
+}
+.header-register {
+    @apply text-2xl font-bold mb-6 text-center;
+}
+.header-register span {
+    @apply text-blue-500;
+}
+.param-register {
+    @apply mb-3 font-semibold w-full;
+}
+.input-register {
+    @apply border border-gray-400 rounded-md py-2 px-4 mb-4 
+    focus:outline-none focus:ring-3 focus:ring-blue-500 w-full;
+}
+.register-button {
+    @apply bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors w-full;
+}
+#register-error {
+    @apply text-red-500 mb-4;
+}
+#login{
+    @apply text-center mt-4 bg-gray-100 p-4 rounded;
+}
